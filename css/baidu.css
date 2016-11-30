@@ -1,0 +1,455 @@
+html,body{
+    width: 100%;height: 100%;
+    padding: 0;margin: 0;overflow: hidden;
+    font-family:"微软雅黑";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+/* 头部*/
+header{
+    width: 100%;height: 60px;
+    background: #168bd8;
+    position: fixed;left: 0;
+    top:0;z-index: 9999;
+}
+.header{
+    height: 100%;
+}
+.header a{
+    float: left;color: #fff;
+}
+.logo{
+    width: 120px;height: 40px;margin-top: 10px;
+    background: url(../img/tp.png) no-repeat 0 0;
+}
+.header .index{
+    padding: 0 20px;
+    line-height: 70px;
+}
+.header a:nth-of-type(2){
+    margin-left: 40px;
+}
+.header .ban{
+    padding: 0 20px;
+    line-height: 70px;
+    font-size: 12px;
+}
+.header a:nth-of-type(2){/*兄弟元素里面的第一个*/
+    margin-left: 90px;
+}
+.header a:nth-of-type(8){/*兄弟元素里面的第一个*/
+    color: #DACD43;
+}
+
+.header a:nth-of-type(5){
+margin-left: 150px;
+}
+/*头部结束*/
+.fullpage{
+    width: 100%;height: 100%;
+    transition: margin 2s ease;
+}
+section{
+    width: 100%;height: 100%;
+}
+section:nth-child(1){
+    background:#3fb0ee url(../img/bg0.jpg);
+}
+section:nth-child(2){
+    background:#0d71cd url(../img/bg1.jpg);
+}
+section:nth-child(3){
+    background:#49c179 url(../img/bg2.jpg);
+}
+section:nth-child(4){
+    background:#009a70 url(../img/bg3.jpg);
+}
+/*第一屏*/
+.section{
+   position: relative;box-sizing: border-box;
+}
+.section_1{
+    height: 661px;  background-color: rgb(63, 176, 238);
+}
+.fpCell{
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.section .top{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.section .bg_cloud{
+    animation: cloudmove 100s linear infinite;
+}
+.bg_cloud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background: url(../img/cloud1.png) repeat;
+}
+@keyframes cloudmove {
+    0%{
+        background-position: 2000px 0;
+    }
+    50%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -2000px 0;
+    }
+}
+.section .middle{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+}
+.section .bg_cloud1{
+    animation: cloudmove 280s linear infinite;
+}
+.bg_cloud1{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: url(../img/cloud2.png) repeat;
+}
+.section .bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.section .bg_cloud2{
+    animation: cloudmove 600s linear infinite;
+}
+.bg_cloud2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: url(../img/cloud2.png) repeat;
+}
+.section1_foot{
+    height: 126px;
+    background: #0d71cd url(../img/bg0.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.section .section1_foot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+.center{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.section1_foot .center .hill{
+    position: absolute;
+    transition: all 0.5s ease-out 0.3s;
+}
+.section1_foot .center .hill_2{
+    width: 63px;
+    height: 78px;
+    background: url(../img/hill2.png);
+    right: 288px;
+    top: -13px;
+}
+.section1_foot .center .hill_3{
+    width: 260px;
+    height: 175px;
+    background: url(../img/hill3.png);
+    right: -129px;
+    top: -47px;
+}
+.section1_foot .center .hill_1{
+    width: 265px;
+    height: 175px;
+    background: url(../img/hill1.png);
+    left: -182px;
+    top: -50px;
+}
+.section1_foot .center .hill_ship{
+    width: 242px;
+    height: 228px;
+    background: url(../img/ship1.png);
+    left: 126px;
+    top: -191px;
+}
+.center .center_word{
+    width: 501px;
+    height: 158px;
+    background: url(../img/launch.png);
+    left: 0;
+    top: 125px;
+}
+.fpCell .center .hill{
+    position: absolute;
+    transition: all 0.5s ease-out 0.3s;
+}
+.center .center_flight{
+    animation: flight 3s ease-in-out infinite;
+}
+.center_flight{
+    width: 119px;
+    height: 78px;
+    background: url(../img/flight.png);
+    left: 295px;
+    top: -236px;
+}
+@keyframes flight {
+    0%{
+        top:125px;
+    }
+    50%{
+        top:135px;
+    }
+    100%{
+        top:125px;
+    }
+}
+.arrowGo{
+    bottom: 42px;
+    animation: arrow 1s infinite steps(10,end);
+}
+.btn-arrow {
+    display: block;
+    width: 30px;
+    height: 26px;
+    background: url(../img/arrow.png);
+    position: absolute;
+    left: 485px;
+    bottom: 42px;
+}
+a {
+    color: #a6b6c6;
+    text-decoration: none;
+}
+@keyframes arrow {
+    0% {
+        opacity: 1;
+        transform-origin: center center;
+        transform: translate(-50%,0);
+        bottom: 42px;
+    }
+
+    50% {
+        opacity: .5;
+        transform-origin: center center;
+        transform: translate(-50%,0);
+        bottom: 36px;
+    }
+    100% {
+        opacity: 1;
+        transform-origin: center center;
+        transform: translate(-50%,0);
+        bottom: 42px;
+    }
+}
+.denglu{
+    width:340px;height:300px;background: #4EBFFC;
+    position: absolute;
+    left:620px;top:140px;
+    border-radius: 5px;
+}
+.yonghu{
+    width:300px;height:40px;
+    background: #fff;
+    margin:0 auto;
+    margin-top: 25px;
+}
+.yonghu span{
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icons.png) no-repeat;
+    background-position: -124px -12px;
+    margin: 12px 3px 10px 10px;
+    float: left;
+}
+.yonghu input{
+    border: none;
+    color: #B1B1C6;
+    line-height: 30px;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.yanzhengma{
+    width:140px;height:40px;
+    background: #fff;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.login{
+    width:300px;height: 38px;
+    margin:0 auto;
+    background: #FFD850;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 38px;
+    color: #5C4C12;
+    font-size: 16px;
+}
+
+/*第二屏*/
+.section_2{
+    height: 662px;
+    background-color: rgb(13, 113, 205);
+}
+.title_word{
+    opacity: 1;
+    position: absolute;
+    transition: all .5s ease-out .3s;
+}
+.title_word_1{
+    top: 220px;
+    left: 20px;
+}
+.section .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: '微软雅黑';
+    color: #fff;
+    width: 500px;
+}
+.section_2 .title h3{
+    background: url(../img/h_lingxian.png) no-repeat;
+}
+.section .title h3 {
+    width: 66px;
+    height: 126px;
+    text-indent: -9999em;
+    float: left;
+}
+.lx{
+    animation: lxs 2s infinite;
+    transform-style: preserve-3d;
+}
+@keyframes lxs {
+    0% {
+        transform: rotateY(0deg);
+    }
+    40% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+.section .title .text {
+    margin-left: 86px;
+    margin-top: 8px;
+}
+.section .title .text h4 {
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 48px;
+    margin-bottom: 6px;
+    /*background: #668AB0;*/
+    color: #fff;
+    width: 267px;
+}
+.section .title .text p {
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    opacity: .8;
+}
+.obj-brain {
+    position: absolute;
+    left: 600px;
+    opacity: 1;
+    width: 444px;
+    height: 427px;
+    background: url(../img/brain_36a156f.png);
+    top: 150px;
+}
+.section .bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.square-1 {
+    background: #35b568;
+    left: 70px;
+    width: 44px;
+    height: 44px;
+}
+.square-2 {
+    background: #4ac179;
+    left: 158px;
+}
+.square-3 {
+    background: #8ae75a;
+    left: 246px;
+    width: 44px;
+    height: 44px;
+}
+.square-4 {
+    background: #8ae75a;
+    right: 328px;
+    width: 44px;
+    height: 44px;
+}
+.square-5 {
+    background: #4ac179;
+    right: 240px;
+    width: 44px;
+    height: 44px;
+}
+.square {
+    bottom: 0;
+    position: absolute;
+    display: block;
+    width: 88px;
+    height: 88px;
+}
+/*第三屏*/
+.obj-brain3{
+    position: absolute;
+    left: 600px;
+    opacity: 1;
+    width: 444px;
+    height: 427px;
+    background: url(../img/allside_e8abd12.png) no-repeat;
+    top: 150px;
+}
+.section_3 .title h3{
+    background: url(../img/h_quanmian_8f813d2.png) no-repeat;
+}
+/*第四屏*/
+.obj-brain4{
+    position: absolute;
+    left: 600px;
+    opacity: 1;
+    width: 444px;
+    height: 427px;
+    background: url(../img/stat_8934528.png) no-repeat;
+    top: 150px;
+}
+.section_4 .title h3{
+    background: url(../img/h_zhuanye_256a94d.png) no-repeat;
+}
